@@ -1,0 +1,23 @@
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+	if (req.url === '/') {
+		res.statusCode = 200;
+		res.setHeader('Content-Type', 'text/html');
+		res.end('<h1>Hello World</h1>');
+	} else if (req.url === '/list') {
+		res.statusCode = 200;
+		res.setHeader('Content-Type', 'text/html');
+		res.end('<h1>User List</h1>');
+	} else {
+		res.statusCode = 404;
+		res.end('Not Found');
+	}
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
