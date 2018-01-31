@@ -1,0 +1,12 @@
+/.jshintrc
+/.project
+/.settings/
+/.sublime-project
+/.tern-project
+/README.md
+/app.js
+/build.gradle
+/hello-world-server.js
+/index.js
+/noname.js
+/package.json
